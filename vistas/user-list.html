@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>CheckDesk-Todos los Usuarios</title>
+    <link rel='icon' href='assets/icons/favicon.png'/>
+	<!-- Normalize V8.0.1 -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- Bootstrap V4.3 -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<link rel="stylesheet" href="./css/bootstrap-material-design.min.css">
+
+	<!-- Font Awesome V5.9.0 -->
+	<link rel="stylesheet" href="./css/all.css">
+
+	<!-- Sweet Alerts V8.13.0 CSS file -->
+	<link rel="stylesheet" href="./css/sweetalert2.min.css">
+
+	<!-- Sweet Alert V8.13.0 JS file-->
+	<script src="./js/sweetalert2.min.js" ></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
+	
+	<!-- General Styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+<body>
+	
+	<!-- Main container -->
+	<main class="full-box main-container">
+		<!-- Nav lateral -->
+<section class="full-box nav-lateral">
+    <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+    <div class="full-box nav-lateral-content">
+<img src="assets/img/logo2.png" width="256" height="144" alt="" aling=center/>
+<div class="full-box nav-lateral-bar"></div>
+<nav class="full-box nav-lateral-menu">
+  <ul>
+                <li>
+                    <a href="home.html"><i class="fas fa-home fa-fw"></i> &nbsp;Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; &nbsp;Usuarios <i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Usuario</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Usuarios</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Usuario</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas fa-desktop fa-fw"></i> &nbsp; &nbsp;Equipos <i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Equipo</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Equipos</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Equipo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-shopping-basket fa-fw"></i> &nbsp; &nbsp;Proveedores <i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Proveedor</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Proveedores</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Proveedores</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-calendar-alt fa-fw"></i> &nbsp; &nbsp;Solicitudes <i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Enviar Solicitud</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Solicitudes</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Solicitud</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-wrench fa-fw"></i> &nbsp; &nbsp;Mantenimientos <i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Mantenimientos Solicitados</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-check fa-fw"></i> &nbsp; Mantenimientos Realizados</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-building fa-fw"></i> &nbsp; &nbsp;Departamentos<i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Departamento</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Departamentos</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Departamento</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-user-tie fa-fw"></i> &nbsp; &nbsp;Cargos<i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Cargo</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Cargos</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Cargo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-key fa-fw"></i> &nbsp; &nbsp;Roles<i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Rol</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Roles</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Rol</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn-submenu"><i class="fas  fa-clock fa-fw"></i> &nbsp; &nbsp;Horarios<i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo Horario</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-list fa-fw"></i> &nbsp; Lista de Horarios</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Horario</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp;Reportes</a>
+                </li>
+</ul>
+      </nav>
+  </div>
+</section>
+
+		<!-- Page content -->
+		<section class="full-box page-content">
+			<nav class="full-box navbar-info">
+				<a href="#" class="float-left show-nav-lateral">
+					<i class="fas fa-exchange-alt"></i>
+				</a>
+				<a href="user-update.html">
+					<i class="fas fa-user-cog"></i>
+				</a>
+				<a href="#" class="btn-exit-system">
+					<i class="fas fa-power-off"></i>
+				</a>
+			</nav>
+
+			<!-- Page header -->
+			<div class="full-box page-header">
+				<h1 class="text-left">
+					<i class="fas fa-users fa-fw"></i> &nbsp;Usuarios
+				</h1>
+			</div>
+			
+			<div class="container-fluid">
+				<ul class="full-box list-unstyled page-nav-tabs">
+					<li>
+						<a href="user-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo</a>
+					</li>
+					<li>
+						<a class="active" href="user-list.html"><i class="fas fa-list fa-fw"></i> &nbsp; Todos los Usuarios</a>
+					</li>
+					<li>
+						<a href="user-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar</a>
+					</li>
+				</ul>	
+			</div>
+			
+			<!-- Content -->
+			<div class="container-fluid">
+				<div class="table-responsive">
+					<table class="table table-dark table-sm">
+						<thead>
+							<tr class="text-center roboto-medium">
+								<th>#ID</th>
+								<th>Nombre(s)</th>
+								<th>Apellidos(s)</th>
+								<th>Fecha de Ingreso</th>
+								<th>Correo</th>
+								<th>Contraseña</th>
+								<th>#ID Rol</th>
+								<th>#ID Departamento</th>
+								<th>#ID Horario</th>
+								<th>Estado</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center" >
+								<td>1</td>
+								<td>03045643</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>APELLIDO DE USUARIO</td>
+								<td>2345456</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>ADMIN@ADMIN.COM</td>
+								<td>
+									<a href="user-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr class="text-center" >
+								<td>2</td>
+								<td>03045643</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>APELLIDO DE USUARIO</td>
+								<td>2345456</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>ADMIN@ADMIN.COM</td>
+								<td>
+									<a href="user-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr class="text-center" >
+								<td>3</td>
+								<td>03045643</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>APELLIDO DE USUARIO</td>
+								<td>2345456</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>ADMIN@ADMIN.COM</td>
+								<td>
+									<a href="user-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr class="text-center" >
+								<td>4</td>
+								<td>03045643</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>APELLIDO DE USUARIO</td>
+								<td>2345456</td>
+								<td>NOMBRE DE USUARIO</td>
+								<td>ADMIN@ADMIN.COM</td>
+								<td>
+									<a href="user-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled">
+							<a class="page-link" href="#" tabindex="-1">Anterior</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item">
+							<a class="page-link" href="#">Siguiente</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	</main>
+	
+	
+	<!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+	<!-- jQuery V3.4.1 -->
+	<script src="./js/jquery-3.4.1.min.js" ></script>
+
+	<!-- popper -->
+	<script src="./js/popper.min.js" ></script>
+
+	<!-- Bootstrap V4.3 -->
+	<script src="./js/bootstrap.min.js" ></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js" ></script>
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<script src="./js/bootstrap-material-design.min.js" ></script>
+	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
+	<script src="./js/main.js" ></script>
+</body>
+</html>
