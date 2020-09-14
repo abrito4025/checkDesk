@@ -1,7 +1,15 @@
+<IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# directory browsing
 Options All -Indexes
-<<<<<<< HEAD
-RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?views=$1
-=======
-RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?views=$1
->>>>>>> f1d5569fa86f953980ae080c0560bd4fcb1d6625
+ErrorDocument 403 https://orbi.net.do/
+ErrorDocument 404 https://orbi.net.do/
