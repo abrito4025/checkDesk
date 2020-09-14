@@ -1,0 +1,164 @@
+body {
+    font-family: "Karla", sans-serif;
+    color: #747474;
+}
+
+h1, h2,
+h3, h4 {
+    color: #090909;
+    font-weight: 700;
+}
+
+.bg-hero {
+    background-image: url('../img/estudiantes_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+
+}
+
+form label, th {
+    font-size: 12px;
+    text-transform: uppercase;
+    /*color: #6D6D6D;*/
+    font-weight: 700;
+}
+
+table td{
+    font-size: 1em;
+}
+
+table input[type="radio"] {   
+    vertical-align: middle;
+}
+
+.inputUsr, .inputPwd{
+    position: relative;
+}
+
+.inputUsr:before {
+    font-family: 'Font Awesome 5 Free';  
+    content: "\f007"; 
+    font-weight: 900; 
+    position: absolute;
+    top: 33px;
+    left: 10px;
+}
+
+.inputPwd:before {
+    font-family: 'Font Awesome 5 Free';  
+    content: "\f023";
+    font-weight: 900;
+    position: absolute;
+    top: 33px;
+    left: 10px;
+}
+
+#inputUsr, #inputPwd {
+    padding-left: 30px;
+}
+
+
+.p-sticky {
+    background: #FFF;
+    z-index: 999;
+}
+
+
+
+.btn-success-g {
+    color: #fff;
+    background: #20bf6b;
+    background: -moz-linear-gradient(left, #20bf6b 0%, #26de81 100%);
+    background: -webkit-linear-gradient(left, #20bf6b 0%,#26de81 100%);
+    background: linear-gradient(to right, #20bf6b 0%,#26de81 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20bf6b', endColorstr='#26de81',GradientType=1 );
+    
+}
+.btn-success-g:hover,
+.btn-info-g:hover {
+    color: #fff;
+}
+
+.btn-info-g {
+    color: #FFF;
+    background: #0060a9;
+    background: -moz-linear-gradient(left,  #0060a9 0%, #2d98da 100%);
+    background: -webkit-linear-gradient(left,  #0060a9 0%,#2d98da 100%);
+    background: linear-gradient(to right,  #0060a9 0%,#2d98da 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0060a9', endColorstr='#2d98da',GradientType=1 );
+}
+
+
+@media (min-width:768px) {
+    .h-md-100 {
+        height: 100vh;
+    }
+
+    .p-sticky {        
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    }
+}
+
+/* 
+Cupo lleno 
+Ya seleccionada
+Cuando choca 
+*/
+
+
+.class-selected {
+    font-weight: 700;
+    background:rgba(0, 0, 0, 0.075) !important;
+}
+
+.class-full {
+    background: rgb(255, 230, 230) !important;
+    color:#ff3300;
+    cursor:not-allowed;
+}
+.class-full .label{
+    color:#ff3300;
+    cursor:not-allowed;
+}
+
+.class-full .label, .class-full input{
+    cursor:not-allowed !important;
+    pointer-events: none;
+}
+
+.row-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: rgba(0,0,0,0.3);
+}
+
+.row-disabled .label, .row-disabled input{
+    cursor:not-allowed !important;
+    pointer-events: none;
+    color: rgba(0,0,0,0.3);
+}
+
+.label{
+    margin-bottom: 0;
+}
+.label:hover{
+    cursor: pointer;
+}
+.table-sm th, .table-sm td{
+    vertical-align: inherit;
+    text-align: center;
+}
+
+blockquote {
+    margin: 0;
+    margin-left: 3%;
+    border-left: #0667af 3px solid;
+    padding-left: 10px;
+}
+
+#modalCo .modal-dialog {  
+    max-width: 90% !important;
+}
