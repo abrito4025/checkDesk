@@ -10,7 +10,7 @@ class Main extends CI_Controller {
 		$this->load->library('session');
 	}
 
-	public function index(){//echo (base_url());
+	public function index(){
 		//var_dump($this->session->server_name);exit();
 		if (isset($this->session) && $this->session->Permitir == "TRUE" /*&& $this->session->server_name == 'orbi.net.do'*/) {
 			$inscripcion = new Inscripcion_model();

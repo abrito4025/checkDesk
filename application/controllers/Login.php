@@ -7,6 +7,7 @@ class Login extends CI_controller{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->library('session');
+		$this->load->model('login_model');
 	}
 
 	public function index(){ 
@@ -14,8 +15,8 @@ class Login extends CI_controller{
 		$this->form_validation->set_rules('password' ,'Contraseña', 'required');
 
 		$this->form_validation->set_message('required', 'El campo %s es requerido');
-
 		if($this->form_validation->run() == false){
+
 			$this->load->view('login');
 		}
 		else{
@@ -24,10 +25,16 @@ class Login extends CI_controller{
 			$password = $this->input->post('password');
 			$login = $this->login_model->login($usuario, $password);
 			
-			if ($login) {
-				redirect('');
+			if ($login) { 
+				if($this->session->userdata['_data']['id']==1){
+					echo 'administrador'; exit;
+				}else if($this->session->userdata['_data']['id']==2){
+					echo 'Tecnico'; exit;
+				}else if($this->session->userdata['_data']['id']==3){
+					echo 'Empleado'; exit;
+				}
 			}
-			else{
+			else{echo 2;
 				$this->load->view('login');
 			}
 		}

@@ -11,5 +11,5 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 
 # directory browsing
 Options All -Indexes
-ErrorDocument 403 https://orbi.net.do/
-ErrorDocument 404 https://orbi.net.do/
+ErrorDocument 403 https://aaa.net.do/
+ErrorDocument 404 https://aaa.net.do/
