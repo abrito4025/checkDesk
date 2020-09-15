@@ -8,6 +8,7 @@ class Login extends CI_controller{
 		$this->load->library('form_validation');
 		$this->load->library('session');
 		$this->load->model('login_model');
+		$this->load->helper('url');
 	}
 
 	public function index(){ 
@@ -27,7 +28,7 @@ class Login extends CI_controller{
 			
 			if ($login) { 
 				if($this->session->userdata['_data']['id']==1){
-					echo 'administrador'; exit;
+					redirect('./');
 				}else if($this->session->userdata['_data']['id']==2){
 					echo 'Tecnico'; exit;
 				}else if($this->session->userdata['_data']['id']==3){
