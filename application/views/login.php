@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/css/styles.css">
 
-    <title>ITLA - Modulo de Inscripción</title>
+    <title>CHECKDESK - iniciar sesión</title>
 </head>
 <body>
     <div class="d-md-flex align-items-center animated fadeIn">
