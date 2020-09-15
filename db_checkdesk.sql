@@ -4,7 +4,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2020 a las 05:36:47
+-- Tiempo de generación: 15-09-2020 a las 06:09:11
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.1.33
 
@@ -28,9 +28,9 @@ DELIMITER $$
 -- Procedimientos
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `getAcceso` (IN `_correoUsuario` VARCHAR(100), IN `_Clave` VARCHAR(32))  BEGIN
-	 SELECT u.idUsuario, u.email, ru.idRol,u.estado FROM usuario u
-		INNER JOIN usuariorol ru ON ru.idUsuario = u.idUsuario
-	 WHERE u.email = _correoUsuario AND u.clave = _Clave;
+   SELECT u.idUsuario, u.email, ru.idRol,u.estado FROM usuario u
+    INNER JOIN usuariorol ru ON ru.idUsuario = u.idUsuario
+   WHERE u.email = _correoUsuario AND u.clave = _Clave;
 END$$
 
 DELIMITER ;
