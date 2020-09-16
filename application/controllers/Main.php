@@ -12,10 +12,9 @@ class Main extends CI_Controller {
 
 	public function index(){
 		
-		if ($this->session->userdata['_data']['id']==1 ) {
-
-
-			$data['datos'] = "1111";
+	if (isset($this->session->userdata['_data']) && $this->session->userdata['_data']['id']==1 ) {
+			
+		$data['datos'] = "1111";
 			
 			$this->load->view('reporte-list-view');
 			
