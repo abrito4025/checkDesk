@@ -1,4 +1,3 @@
-<!-- Page header -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE REPORTES
@@ -12,7 +11,7 @@
     <ul class="full-box list-unstyled page-nav-tabs">
        
         <li>
-            <a class="active" href="mantenimiento-list/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE REPORTES</a>
+            <a class="active" href="mantenimiento-list/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Agregar Reporte</a>
         </li>
       
     </ul>

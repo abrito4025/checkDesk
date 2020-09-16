@@ -10,19 +10,29 @@ class Main extends CI_Controller {
 		$this->load->library('session');
 	}
 
-	public function index(){
+	public function index(){ 
 		
-		if ($this->session->userdata['_data']['id']==1 ) {
-
-
-			$data['datos'] = "1111";
-			
-			$this->load->view('reporte-list-view');
-			
+		if (isset($this->session->userdata['_data']) && $this->session->userdata['_data']['id']==1 ) {
+		
+			$this->load->view('reporte-list-view');	
 		}
 		else{
 			$this->load->view('login');
 		}
 	}
+
+	function agregarReporte(){
+
+	//	if (isset($this->session->userdata['_data']) && $this->session->userdata['_data']['id']==1 ) {
+			if(isset($_POST)){
+				$this->load->view('header');
+				$this->load->view('menu');
+				//$this->load->view('agregarreporte');	
+				$this->load->view('footer');
+			}else{
+
+			}
+		}
+	//}
 
 }
