@@ -11,7 +11,7 @@
     <ul class="full-box list-unstyled page-nav-tabs">
        
         <li>
-            <a class="active" href="mantenimiento-list/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Agregar Reporte</a>
+            <a class="active" href="./Main/agregarReporte"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Agregar Reporte</a>
         </li>
       
     </ul>

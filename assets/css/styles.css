@@ -10,7 +10,7 @@ h3, h4 {
 }
 
 .bg-hero {
-    background-image: url('../img/estudiantes_bg.jpg');
+    background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
@@ -101,12 +101,6 @@ table input[type="radio"] {
         top: 0;
     }
 }
-
-/* 
-Cupo lleno 
-Ya seleccionada
-Cuando choca 
-*/
 
 
 .class-selected {

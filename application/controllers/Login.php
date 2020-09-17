@@ -32,7 +32,7 @@ class Login extends CI_controller{
 				}else if($this->session->userdata['_data']['id']==2){
 					echo 'Tecnico'; exit;
 				}else if($this->session->userdata['_data']['id']==3){
-					echo 'Empleado'; exit;
+					redirect('./');
 				}
 			}
 			else{echo 2;

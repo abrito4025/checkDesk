@@ -6,9 +6,11 @@ class Main_model extends CI_model
         $this->load->database();
     }
 
-        public function agregarReporte($username,$clave){
-
-       		$this->db->query("INSERT INTO datos_rnc(rnc,NombreEmpresa,FechaCrea,estatus) values ('{$rnc}','{$empresa}',NOW(),'ACTIVO');");
+        public function agregarReporte($row){
+		
+			$asunto=$row['asunto_mantenimiento'];
+			$idUsuario=$this->session->userdata['_data']['UsuarioId'];
+       		$this->db->query("INSERT INTO mantenimiento(asunto,fecha,estado,idUsuario,idEquipo) values ('{$asunto}','NOW()','Pendiente','{$idUsuario}','1');");
     } 
 
 }

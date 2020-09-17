@@ -1,10 +1,9 @@
-
 -- phpMyAdmin SQL Dump
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2020 a las 06:09:11
+-- Tiempo de generación: 17-09-2020 a las 04:13:21
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.1.33
 
@@ -28,9 +27,9 @@ DELIMITER $$
 -- Procedimientos
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `getAcceso` (IN `_correoUsuario` VARCHAR(100), IN `_Clave` VARCHAR(32))  BEGIN
-   SELECT u.idUsuario, u.email, ru.idRol,u.estado FROM usuario u
-    INNER JOIN usuariorol ru ON ru.idUsuario = u.idUsuario
-   WHERE u.email = _correoUsuario AND u.clave = _Clave;
+	 SELECT u.idUsuario, u.email, ru.idRol,u.estado, CONCAT(u.nombre,' ', u.apellido) AS nombre FROM usuario u
+		INNER JOIN usuariorol ru ON ru.idUsuario = u.idUsuario
+	 WHERE u.email = _correoUsuario AND u.clave = _Clave;
 END$$
 
 DELIMITER ;
@@ -150,7 +149,26 @@ CREATE TABLE `mantenimiento` (
 INSERT INTO `mantenimiento` (`idMantenimiento`, `asunto`, `fecha`, `estado`, `idUsuario`, `idEquipo`) VALUES
 (1, 'Reparación disco duro', '2020-09-01', 'Pendiente', 3, 1),
 (2, 'Actualización de software', '2020-09-03', 'Completado', 3, 2),
-(3, 'Instalación de programas', '2020-09-11', 'Proceso', 5, 3);
+(3, 'Instalación de programas', '2020-09-11', 'Proceso', 5, 3),
+(4, 'aaaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(5, 'Maquina descompuesta', '0000-00-00', 'Pendiente', 2, 1),
+(6, 'Maquina descompuesta', '0000-00-00', 'Pendiente', 2, 1),
+(7, 'Maquina descompuesta', '0000-00-00', 'Pendiente', 2, 1),
+(8, 'Maquina descompuesta', '0000-00-00', 'Pendiente', 2, 1),
+(9, '', '0000-00-00', 'Pendiente', 2, 1),
+(10, '', '0000-00-00', 'Pendiente', 2, 1),
+(11, '', '0000-00-00', 'Pendiente', 2, 1),
+(12, '', '0000-00-00', 'Pendiente', 2, 1),
+(13, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(14, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(15, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(16, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(17, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(18, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(19, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(20, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(21, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1),
+(22, 'aaaaaaaaaaaaa', '0000-00-00', 'Pendiente', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -293,7 +311,8 @@ CREATE TABLE `usuariorol` (
 --
 
 INSERT INTO `usuariorol` (`idUsuario`, `idRol`) VALUES
-(2, 1);
+(2, 1),
+(3, 3);
 
 --
 -- Índices para tablas volcadas
@@ -412,7 +431,7 @@ ALTER TABLE `horario`
 -- AUTO_INCREMENT de la tabla `mantenimiento`
 --
 ALTER TABLE `mantenimiento`
-  MODIFY `idMantenimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idMantenimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedor`

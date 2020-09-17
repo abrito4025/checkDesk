@@ -28,6 +28,7 @@ class Login_model extends CI_model
                 array(
                     'UsuarioId' => $row->idUsuario, 
                     'usuario' => $row->email, 
+                    'nombre' => $row->nombre,
                     'id' => $row->idRol, 
                     'estatus' => $row->estado
                 ), "_action" => NULL);
